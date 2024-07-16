@@ -8,11 +8,31 @@
 import SwiftUI
 
 struct DummyNavigationButton: View {
+    let title : String
+    let icon : String?
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            RoundedRectangle(cornerRadius: 15)
+                .foregroundColor(.accent)
+            
+            if icon == nil {
+                Text(title)
+                    .foregroundColor(.white)
+                    .font(.title)
+                    .bold()
+            } else {
+                Label(title, systemImage: icon ?? "")
+                    .foregroundColor(.white)
+                    .font(.title2)
+                    .bold()
+            }
+        }
+        .padding(.top)
+        .frame(height: 65)
     }
 }
 
 #Preview {
-    DummyNavigationButton()
+    DummyNavigationButton(title: "Test", icon: nil)
 }

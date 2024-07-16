@@ -1,5 +1,5 @@
 //
-//  SignInSeconView.swift
+//  SignInSecondView.swift
 //  Foxy
 //
 //  Created by Tilly Persson on 2024-07-14.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct SignInSeconView: View {
-    @StateObject private var viewModel = SignInViewModel()
+struct SignInSecondView: View {
+    @EnvironmentObject var viewModel : SignInViewModel
     
     var body: some View {
         GeometryReader { geometry in
@@ -47,14 +47,17 @@ struct SignInSeconView: View {
                 
                 Spacer()
                 
-                NavigationButton(title: "Continue", icon: nil, destination: SignInFirstView())
-                    .padding(.horizontal, 20)
-                    .padding(.bottom, 20)
+                NavigationButton(title: "Continue", icon: nil) {
+                    
+                }
+                .padding(.horizontal, 20)
+                .padding(.bottom, 20)
             }
         }
     }
 }
 
 #Preview {
-    SignInSeconView()
+    SignInSecondView()
+        .environmentObject(SignInViewModel())
 }

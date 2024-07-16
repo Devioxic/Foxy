@@ -1,5 +1,5 @@
 //
-//  AccentButton.swift
+//  PrimaryButton.swift
 //  Foxy
 //
 //  Created by Tilly Persson on 2024-07-13.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AccentButton: View {
+struct PrimaryButton: View {
     let title : String
     let icon : String?
     let action : () -> Void
@@ -18,7 +18,7 @@ struct AccentButton: View {
         } label: {
             ZStack {
                 RoundedRectangle(cornerRadius: 15)
-                    .foregroundColor(.accent)
+                    .foregroundColor(.primaryColor)
                 
                 if icon == nil {
                     Text(title)
@@ -38,7 +38,7 @@ struct AccentButton: View {
 }
 
 #Preview {
-    AccentButton(title: "Test", icon: "play.fill") {
+    PrimaryButton(title: "Test", icon: "play.fill") {
         
     }
 }

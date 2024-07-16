@@ -1,5 +1,5 @@
 //
-//  SignInFirst.swift
+//  SignInFirstView.swift
 //  Foxy
 //
 //  Created by Tilly Persson on 2024-07-13.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct SignInFirst: View {
-    
+struct SignInFirstView: View {
+    @EnvironmentObject var viewModel : SignInViewModel
     
     var body: some View {
         GeometryReader { geometry in
@@ -22,22 +22,33 @@ struct SignInFirst: View {
                     .padding(.top, 50)
                     .font(.largeTitle)
                     .fontWeight(.bold)
-                Form {
-                    TextField("jellyfin.example.org")
+                
+                VStack(alignment: .leading) {
+                    Text("Server URL")
+                        .padding(.horizontal, 30)
+                    TextField("jellyfin.example.com", text: $viewModel.serverURL)
+                        .padding(12)
+                        .background(Color.textFieldColor)
+                        .cornerRadius(12)
+                        .padding(.horizontal, 20)
+                        .keyboardType(.URL)
+                        .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
+                        .autocorrectionDisabled()
                 }
+                .padding(.top, 20)
                 
                 Spacer()
-                NavigationButton(title: "Get Started", icon: nil, destination: SignInFirst())
-                .frame(height: 65)
-                .padding(.horizontal, 20)
-                .padding(.bottom, 20)
+                
+                NavigationButton(title: "Continue", icon: nil) {
+                    viewModel.connectToServer()
+                }
+                .padding(20)
             }
-            .frame(width: geometry.size.width)
-            
         }
     }
 }
 
 #Preview {
-    SignInFirst()
+    SignInFirstView()
+        .environmentObject(SignInViewModel())
 }

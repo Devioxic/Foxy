@@ -1,5 +1,5 @@
 //
-//  PrimaryButton.swift
+//  NavigationButton.swift
 //  Foxy
 //
 //  Created by Tilly Persson on 2024-07-13.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PrimaryButton: View {
+struct NavigationButton: View {
     let title : String
     let icon : String?
     let action : () -> Void
@@ -18,7 +18,7 @@ struct PrimaryButton: View {
         } label: {
             ZStack {
                 RoundedRectangle(cornerRadius: 15)
-                    .foregroundColor(.primaryColor)
+                    .foregroundColor(.accent)
                 
                 if icon == nil {
                     Text(title)
@@ -33,12 +33,7 @@ struct PrimaryButton: View {
                 }
             }
             .padding(.top)
+            .frame(height: 65)
         }
-    }
-}
-
-#Preview {
-    PrimaryButton(title: "Test", icon: "star.fill") {
-        
     }
 }

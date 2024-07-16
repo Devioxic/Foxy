@@ -11,7 +11,7 @@ import SwiftUI
 struct FoxyApp: App {
     var body: some Scene {
         WindowGroup {
-            StartView()
+            MainView()
         }
     }
 }

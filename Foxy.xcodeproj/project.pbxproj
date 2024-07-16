@@ -7,18 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A0B381C2C42E04300C11D4E /* FoxyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0B381B2C42E04300C11D4E /* FoxyApp.swift */; };
-		3A0B381E2C42E04300C11D4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0B381D2C42E04300C11D4E /* ContentView.swift */; };
+		3A0B381C2C42E04300C11D4E /* Foxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0B381B2C42E04300C11D4E /* Foxy.swift */; };
+		3A0B381E2C42E04300C11D4E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0B381D2C42E04300C11D4E /* MainView.swift */; };
 		3A0B38202C42E04400C11D4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A0B381F2C42E04400C11D4E /* Assets.xcassets */; };
 		3A0B38232C42E04400C11D4E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A0B38222C42E04400C11D4E /* Preview Assets.xcassets */; };
+		3A0B382F2C42E4D100C11D4E /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0B382E2C42E4D100C11D4E /* WelcomeView.swift */; };
+		3A0B38312C42E99B00C11D4E /* DevLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A0B38302C42E99B00C11D4E /* DevLogo.png */; };
+		3A0B38342C42FB8000C11D4E /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0B38332C42FB8000C11D4E /* ColorExtension.swift */; };
+		3A0B38362C42FC5200C11D4E /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0B38352C42FC5200C11D4E /* NavigationButton.swift */; };
+		3A0B38382C42FC5E00C11D4E /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0B38372C42FC5E00C11D4E /* PrimaryButton.swift */; };
+		3A0B383A2C430B5300C11D4E /* SignInFirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0B38392C430B5300C11D4E /* SignInFirstView.swift */; };
+		3A0B383D2C43257C00C11D4E /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0B383C2C43257C00C11D4E /* SignInViewModel.swift */; };
+		3A0B38412C445D0700C11D4E /* SignInSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0B38402C445D0700C11D4E /* SignInSecondView.swift */; };
+		3A0B38432C45464700C11D4E /* DummyNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0B38422C45464700C11D4E /* DummyNavigationButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3A0B38182C42E04300C11D4E /* Foxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foxy.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A0B381B2C42E04300C11D4E /* FoxyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoxyApp.swift; sourceTree = "<group>"; };
-		3A0B381D2C42E04300C11D4E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3A0B381B2C42E04300C11D4E /* Foxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foxy.swift; sourceTree = "<group>"; };
+		3A0B381D2C42E04300C11D4E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		3A0B381F2C42E04400C11D4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A0B38222C42E04400C11D4E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3A0B382E2C42E4D100C11D4E /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		3A0B38302C42E99B00C11D4E /* DevLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DevLogo.png; sourceTree = "<group>"; };
+		3A0B38332C42FB8000C11D4E /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		3A0B38352C42FC5200C11D4E /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
+		3A0B38372C42FC5E00C11D4E /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		3A0B38392C430B5300C11D4E /* SignInFirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInFirstView.swift; sourceTree = "<group>"; };
+		3A0B383C2C43257C00C11D4E /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		3A0B38402C445D0700C11D4E /* SignInSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInSecondView.swift; sourceTree = "<group>"; };
+		3A0B38422C45464700C11D4E /* DummyNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyNavigationButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +69,9 @@
 		3A0B381A2C42E04300C11D4E /* Foxy */ = {
 			isa = PBXGroup;
 			children = (
-				3A0B381B2C42E04300C11D4E /* FoxyApp.swift */,
-				3A0B381D2C42E04300C11D4E /* ContentView.swift */,
-				3A0B381F2C42E04400C11D4E /* Assets.xcassets */,
+				3A0B382B2C42E0F900C11D4E /* Other */,
+				3A0B382A2C42E0F100C11D4E /* ViewModels */,
+				3A0B38292C42E0EB00C11D4E /* Views */,
 				3A0B38212C42E04400C11D4E /* Preview Content */,
 			);
 			path = Foxy;
@@ -65,6 +83,55 @@
 				3A0B38222C42E04400C11D4E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3A0B38292C42E0EB00C11D4E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3A0B38322C42F4BE00C11D4E /* Components */,
+				3A0B382C2C42E4A700C11D4E /* Login */,
+				3A0B381D2C42E04300C11D4E /* MainView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3A0B382A2C42E0F100C11D4E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3A0B383C2C43257C00C11D4E /* SignInViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3A0B382B2C42E0F900C11D4E /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				3A0B381B2C42E04300C11D4E /* Foxy.swift */,
+				3A0B381F2C42E04400C11D4E /* Assets.xcassets */,
+				3A0B38302C42E99B00C11D4E /* DevLogo.png */,
+				3A0B38332C42FB8000C11D4E /* ColorExtension.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		3A0B382C2C42E4A700C11D4E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3A0B382E2C42E4D100C11D4E /* WelcomeView.swift */,
+				3A0B38392C430B5300C11D4E /* SignInFirstView.swift */,
+				3A0B38402C445D0700C11D4E /* SignInSecondView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3A0B38322C42F4BE00C11D4E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3A0B38352C42FC5200C11D4E /* NavigationButton.swift */,
+				3A0B38372C42FC5E00C11D4E /* PrimaryButton.swift */,
+				3A0B38422C45464700C11D4E /* DummyNavigationButton.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A0B38312C42E99B00C11D4E /* DevLogo.png in Resources */,
 				3A0B38232C42E04400C11D4E /* Preview Assets.xcassets in Resources */,
 				3A0B38202C42E04400C11D4E /* Assets.xcassets in Resources */,
 			);
@@ -137,8 +205,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A0B381E2C42E04300C11D4E /* ContentView.swift in Sources */,
-				3A0B381C2C42E04300C11D4E /* FoxyApp.swift in Sources */,
+				3A0B38382C42FC5E00C11D4E /* PrimaryButton.swift in Sources */,
+				3A0B381E2C42E04300C11D4E /* MainView.swift in Sources */,
+				3A0B38412C445D0700C11D4E /* SignInSecondView.swift in Sources */,
+				3A0B382F2C42E4D100C11D4E /* WelcomeView.swift in Sources */,
+				3A0B38362C42FC5200C11D4E /* NavigationButton.swift in Sources */,
+				3A0B383D2C43257C00C11D4E /* SignInViewModel.swift in Sources */,
+				3A0B38432C45464700C11D4E /* DummyNavigationButton.swift in Sources */,
+				3A0B383A2C430B5300C11D4E /* SignInFirstView.swift in Sources */,
+				3A0B381C2C42E04300C11D4E /* Foxy.swift in Sources */,
+				3A0B38342C42FB8000C11D4E /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,16 +350,19 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Foxy/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Foxy;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.01;
 				PRODUCT_BUNDLE_IDENTIFIER = me.rubybot.Foxy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -302,16 +381,19 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Foxy/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Foxy;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.01;
 				PRODUCT_BUNDLE_IDENTIFIER = me.rubybot.Foxy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
