@@ -10,6 +10,18 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         WelcomeView()
+        
+        if (false) {
+            TabView {
+                HomeView()
+                    .tabItem {
+                        Image(systemName: "house.fill")
+                        Text("Home")
+                    }
+                    .toolbarBackground(Color.tabBarColor, for: .tabBar)
+                    .toolbarBackground(.visible, for: ToolbarPlacement.tabBar)
+            }
+        }
     }
 }
 

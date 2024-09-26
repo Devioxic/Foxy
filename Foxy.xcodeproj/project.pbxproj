@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,19 @@
 		3A0B383D2C43257C00C11D4E /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0B383C2C43257C00C11D4E /* SignInViewModel.swift */; };
 		3A0B38412C445D0700C11D4E /* SignInSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0B38402C445D0700C11D4E /* SignInSecondView.swift */; };
 		3A0B38432C45464700C11D4E /* DummyNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0B38422C45464700C11D4E /* DummyNavigationButton.swift */; };
+		3A0B38462C46E29B00C11D4E /* QuickConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0B38452C46E29B00C11D4E /* QuickConnect.swift */; };
+		3A6D49682CA524760072B882 /* JellyfinAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 3A6D49672CA524760072B882 /* JellyfinAPI */; };
+		3AEB70AB2C4C37F2006A051E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3AEB70AA2C4C37F2006A051E /* Alamofire */; };
+		3AEB70AD2C50083D006A051E /* QuickConnectAuthenticated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB70AC2C50083D006A051E /* QuickConnectAuthenticated.swift */; };
+		3AEB70AF2C5008BA006A051E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB70AE2C5008BA006A051E /* User.swift */; };
+		3AEB70B12C500EA8006A051E /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB70B02C500EA8006A051E /* KeychainHelper.swift */; };
+		3AEB70B32C50111E006A051E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB70B22C50111E006A051E /* HomeView.swift */; };
+		3AEB70B52C502B54006A051E /* MiniCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB70B42C502B54006A051E /* MiniCard.swift */; };
+		3AEB70B72C503392006A051E /* AlbumScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB70B62C503392006A051E /* AlbumScroll.swift */; };
+		3AEB70B92C503399006A051E /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB70B82C503399006A051E /* Album.swift */; };
+		3AEB70BB2C514214006A051E /* AlbumList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB70BA2C514214006A051E /* AlbumList.swift */; };
+		3AEB70BD2C515102006A051E /* ImageHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB70BC2C515102006A051E /* ImageHelp.swift */; };
+		3AEB70BF2C5153A5006A051E /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB70BE2C5153A5006A051E /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,13 +50,41 @@
 		3A0B383C2C43257C00C11D4E /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		3A0B38402C445D0700C11D4E /* SignInSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInSecondView.swift; sourceTree = "<group>"; };
 		3A0B38422C45464700C11D4E /* DummyNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyNavigationButton.swift; sourceTree = "<group>"; };
+		3A0B38452C46E29B00C11D4E /* QuickConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickConnect.swift; sourceTree = "<group>"; };
+		3AEB70AC2C50083D006A051E /* QuickConnectAuthenticated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickConnectAuthenticated.swift; sourceTree = "<group>"; };
+		3AEB70AE2C5008BA006A051E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3AEB70B02C500EA8006A051E /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		3AEB70B22C50111E006A051E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3AEB70B42C502B54006A051E /* MiniCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCard.swift; sourceTree = "<group>"; };
+		3AEB70B62C503392006A051E /* AlbumScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumScroll.swift; sourceTree = "<group>"; };
+		3AEB70B82C503399006A051E /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		3AEB70BA2C514214006A051E /* AlbumList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumList.swift; sourceTree = "<group>"; };
+		3AEB70BC2C515102006A051E /* ImageHelp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelp.swift; sourceTree = "<group>"; };
+		3AEB70BE2C5153A5006A051E /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		3AECF1DE2C4C2DCF00A7C44B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		3A6D496C2CA54FA50072B882 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				JellyfinMusicService.swift,
+			);
+			target = 3A0B38172C42E04300C11D4E /* Foxy */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		3A6D49692CA54F640072B882 /* Services */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (3A6D496C2CA54FA50072B882 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Services; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3A0B38152C42E04300C11D4E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A6D49682CA524760072B882 /* JellyfinAPI in Frameworks */,
+				3AEB70AB2C4C37F2006A051E /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,7 +110,10 @@
 		3A0B381A2C42E04300C11D4E /* Foxy */ = {
 			isa = PBXGroup;
 			children = (
+				3AECF1DE2C4C2DCF00A7C44B /* Info.plist */,
+				3A0B38442C46E25B00C11D4E /* Models */,
 				3A0B382B2C42E0F900C11D4E /* Other */,
+				3A6D49692CA54F640072B882 /* Services */,
 				3A0B382A2C42E0F100C11D4E /* ViewModels */,
 				3A0B38292C42E0EB00C11D4E /* Views */,
 				3A0B38212C42E04400C11D4E /* Preview Content */,
@@ -91,6 +135,8 @@
 				3A0B38322C42F4BE00C11D4E /* Components */,
 				3A0B382C2C42E4A700C11D4E /* Login */,
 				3A0B381D2C42E04300C11D4E /* MainView.swift */,
+				3AEB70B22C50111E006A051E /* HomeView.swift */,
+				3AEB70BE2C5153A5006A051E /* SearchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -110,6 +156,7 @@
 				3A0B381F2C42E04400C11D4E /* Assets.xcassets */,
 				3A0B38302C42E99B00C11D4E /* DevLogo.png */,
 				3A0B38332C42FB8000C11D4E /* ColorExtension.swift */,
+				3AEB70B02C500EA8006A051E /* KeychainHelper.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -130,8 +177,23 @@
 				3A0B38352C42FC5200C11D4E /* NavigationButton.swift */,
 				3A0B38372C42FC5E00C11D4E /* PrimaryButton.swift */,
 				3A0B38422C45464700C11D4E /* DummyNavigationButton.swift */,
+				3AEB70B42C502B54006A051E /* MiniCard.swift */,
+				3AEB70B62C503392006A051E /* AlbumScroll.swift */,
+				3AEB70B82C503399006A051E /* Album.swift */,
+				3AEB70BA2C514214006A051E /* AlbumList.swift */,
+				3AEB70BC2C515102006A051E /* ImageHelp.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		3A0B38442C46E25B00C11D4E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3A0B38452C46E29B00C11D4E /* QuickConnect.swift */,
+				3AEB70AC2C50083D006A051E /* QuickConnectAuthenticated.swift */,
+				3AEB70AE2C5008BA006A051E /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +212,10 @@
 			dependencies = (
 			);
 			name = Foxy;
+			packageProductDependencies = (
+				3AEB70AA2C4C37F2006A051E /* Alamofire */,
+				3A6D49672CA524760072B882 /* JellyfinAPI */,
+			);
 			productName = Foxy;
 			productReference = 3A0B38182C42E04300C11D4E /* Foxy.app */;
 			productType = "com.apple.product-type.application";
@@ -178,6 +244,10 @@
 				Base,
 			);
 			mainGroup = 3A0B380F2C42E04300C11D4E;
+			packageReferences = (
+				3AEB70A92C4C37F2006A051E /* XCRemoteSwiftPackageReference "Alamofire" */,
+				3A6D49662CA524760072B882 /* XCRemoteSwiftPackageReference "jellyfin-sdk-swift" */,
+			);
 			productRefGroup = 3A0B38192C42E04300C11D4E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -205,14 +275,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AEB70B52C502B54006A051E /* MiniCard.swift in Sources */,
+				3AEB70AF2C5008BA006A051E /* User.swift in Sources */,
 				3A0B38382C42FC5E00C11D4E /* PrimaryButton.swift in Sources */,
+				3A0B38462C46E29B00C11D4E /* QuickConnect.swift in Sources */,
+				3AEB70B32C50111E006A051E /* HomeView.swift in Sources */,
+				3AEB70B92C503399006A051E /* Album.swift in Sources */,
 				3A0B381E2C42E04300C11D4E /* MainView.swift in Sources */,
 				3A0B38412C445D0700C11D4E /* SignInSecondView.swift in Sources */,
+				3AEB70AD2C50083D006A051E /* QuickConnectAuthenticated.swift in Sources */,
 				3A0B382F2C42E4D100C11D4E /* WelcomeView.swift in Sources */,
+				3AEB70BF2C5153A5006A051E /* SearchView.swift in Sources */,
 				3A0B38362C42FC5200C11D4E /* NavigationButton.swift in Sources */,
 				3A0B383D2C43257C00C11D4E /* SignInViewModel.swift in Sources */,
 				3A0B38432C45464700C11D4E /* DummyNavigationButton.swift in Sources */,
 				3A0B383A2C430B5300C11D4E /* SignInFirstView.swift in Sources */,
+				3AEB70BD2C515102006A051E /* ImageHelp.swift in Sources */,
+				3AEB70B12C500EA8006A051E /* KeychainHelper.swift in Sources */,
+				3AEB70BB2C514214006A051E /* AlbumList.swift in Sources */,
+				3AEB70B72C503392006A051E /* AlbumScroll.swift in Sources */,
 				3A0B381C2C42E04300C11D4E /* Foxy.swift in Sources */,
 				3A0B38342C42FB8000C11D4E /* ColorExtension.swift in Sources */,
 			);
@@ -273,7 +354,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -330,7 +411,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -350,6 +431,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Foxy/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Foxy/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Foxy;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -362,7 +444,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.01;
+				MARKETING_VERSION = 0.05;
 				PRODUCT_BUNDLE_IDENTIFIER = me.rubybot.Foxy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -381,6 +463,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Foxy/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Foxy/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Foxy;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -393,7 +476,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.01;
+				MARKETING_VERSION = 0.05;
 				PRODUCT_BUNDLE_IDENTIFIER = me.rubybot.Foxy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -424,6 +507,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3A6D49662CA524760072B882 /* XCRemoteSwiftPackageReference "jellyfin-sdk-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jellyfin/jellyfin-sdk-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
+			};
+		};
+		3AEB70A92C4C37F2006A051E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3A6D49672CA524760072B882 /* JellyfinAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A6D49662CA524760072B882 /* XCRemoteSwiftPackageReference "jellyfin-sdk-swift" */;
+			productName = JellyfinAPI;
+		};
+		3AEB70AA2C4C37F2006A051E /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AEB70A92C4C37F2006A051E /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3A0B38102C42E04300C11D4E /* Project object */;
 }

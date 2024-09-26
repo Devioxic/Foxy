@@ -14,16 +14,16 @@ struct WelcomeView: View {
         NavigationStack(path: $viewModel.viewList) {
             GeometryReader { geometry in
                 VStack {
-                    Image("DevLogo")
+                    Image("Foxies")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(maxWidth: geometry.size.width / 1.75)
                         .padding(.top, geometry.size.height / 20)
-                    Text("Welcome!")
+                    Text("Welcome")
                         .padding(.top, 50)
                         .font(.largeTitle)
                         .fontWeight(.bold)
-                    Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel tristique turpis.")
+                    Text("Sign in to your Jellyfin server to start enjoying your music om Foxy!")
                         .padding(.top, 1)
                         .padding(.horizontal, 20)
                     

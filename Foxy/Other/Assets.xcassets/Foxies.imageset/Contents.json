@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "DevLogo.png",
+      "filename" : "FoxyLogo.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "FoxyLogo@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "FoxyLogo@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

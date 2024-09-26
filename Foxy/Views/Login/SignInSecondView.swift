@@ -13,20 +13,45 @@ struct SignInSecondView: View {
     var body: some View {
         GeometryReader { geometry in
             VStack {
-                Image("DevLogo")
+                Image("Foxies")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(maxWidth: geometry.size.width / 1.75)
                     .padding(.top, geometry.size.height / 20)
-                Text("Sign in")
-                    .padding(.top, 50)
+                Text("Sign in to \(viewModel.serverURL)")
+                    .padding(.top, 20)
                     .font(.largeTitle)
                     .fontWeight(.bold)
+                    .multilineTextAlignment(.center)
+                
+                if viewModel.isQuickConnectEnabled {
+                    VStack {
+                        Text("Quick Connect")
+                            .font(.title2)
+                        Text(viewModel.quickConnectCode)
+                            .font(.title .bold())
+                            .padding(.top, 5)
+                    }
+                    .padding(.top, 20)
+                    
+                    
+                    HStack {
+                        VStack {
+                            Divider()
+                        }
+                        Text("Or")
+                            .padding()
+                        VStack {
+                            Divider()
+                        }
+                    }
+                    .padding(.horizontal, 20)
+                }
                 
                 VStack(alignment: .leading) {
                     Text("Username")
                         .padding(.horizontal, 30)
-                    TextField("Demo", text: $viewModel.serverURL)
+                    TextField("Demo", text: $viewModel.username)
                         .padding(12)
                         .background(Color.textFieldColor)
                         .cornerRadius(12)
@@ -37,7 +62,7 @@ struct SignInSecondView: View {
                 VStack(alignment: .leading) {
                     Text("Password")
                         .padding(.horizontal, 30)
-                    SecureField("", text: $viewModel.serverURL)
+                    SecureField("", text: $viewModel.password)
                         .padding(12)
                         .background(Color.textFieldColor)
                         .cornerRadius(12)

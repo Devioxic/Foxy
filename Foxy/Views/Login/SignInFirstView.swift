@@ -13,7 +13,7 @@ struct SignInFirstView: View {
     var body: some View {
         GeometryReader { geometry in
             VStack {
-                Image("DevLogo")
+                Image("Foxies")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(maxWidth: geometry.size.width / 1.75)
@@ -43,6 +43,13 @@ struct SignInFirstView: View {
                     viewModel.connectToServer()
                 }
                 .padding(20)
+            }
+            .alert(isPresented: $viewModel.showAlert) {
+                Alert (
+                title: Text("Error"),
+                message: Text(viewModel.errorMessage),
+                dismissButton: .default(Text("OK"))
+                )
             }
         }
     }

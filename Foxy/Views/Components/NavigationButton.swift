@@ -18,7 +18,7 @@ struct NavigationButton: View {
         } label: {
             ZStack {
                 RoundedRectangle(cornerRadius: 15)
-                    .foregroundColor(.accent)
+                    .foregroundColor(Color.primaryColor)
                 
                 if icon == nil {
                     Text(title)
