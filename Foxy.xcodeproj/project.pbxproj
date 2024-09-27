@@ -12,7 +12,6 @@
 		3A0B38202C42E04400C11D4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A0B381F2C42E04400C11D4E /* Assets.xcassets */; };
 		3A0B38232C42E04400C11D4E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A0B38222C42E04400C11D4E /* Preview Assets.xcassets */; };
 		3A0B382F2C42E4D100C11D4E /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0B382E2C42E4D100C11D4E /* WelcomeView.swift */; };
-		3A0B38312C42E99B00C11D4E /* DevLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A0B38302C42E99B00C11D4E /* DevLogo.png */; };
 		3A0B38342C42FB8000C11D4E /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0B38332C42FB8000C11D4E /* ColorExtension.swift */; };
 		3A0B38362C42FC5200C11D4E /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0B38352C42FC5200C11D4E /* NavigationButton.swift */; };
 		3A0B38382C42FC5E00C11D4E /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0B38372C42FC5E00C11D4E /* PrimaryButton.swift */; };
@@ -20,11 +19,10 @@
 		3A0B383D2C43257C00C11D4E /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0B383C2C43257C00C11D4E /* SignInViewModel.swift */; };
 		3A0B38412C445D0700C11D4E /* SignInSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0B38402C445D0700C11D4E /* SignInSecondView.swift */; };
 		3A0B38432C45464700C11D4E /* DummyNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0B38422C45464700C11D4E /* DummyNavigationButton.swift */; };
-		3A0B38462C46E29B00C11D4E /* QuickConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0B38452C46E29B00C11D4E /* QuickConnect.swift */; };
 		3A6D49682CA524760072B882 /* JellyfinAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 3A6D49672CA524760072B882 /* JellyfinAPI */; };
+		3A6D49702CA6DDA00072B882 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6D496F2CA6DDA00072B882 /* MainViewModel.swift */; };
+		3A6D49722CA6E2420072B882 /* Pills.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6D49712CA6E2420072B882 /* Pills.swift */; };
 		3AEB70AB2C4C37F2006A051E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3AEB70AA2C4C37F2006A051E /* Alamofire */; };
-		3AEB70AD2C50083D006A051E /* QuickConnectAuthenticated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB70AC2C50083D006A051E /* QuickConnectAuthenticated.swift */; };
-		3AEB70AF2C5008BA006A051E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB70AE2C5008BA006A051E /* User.swift */; };
 		3AEB70B12C500EA8006A051E /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB70B02C500EA8006A051E /* KeychainHelper.swift */; };
 		3AEB70B32C50111E006A051E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB70B22C50111E006A051E /* HomeView.swift */; };
 		3AEB70B52C502B54006A051E /* MiniCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB70B42C502B54006A051E /* MiniCard.swift */; };
@@ -42,7 +40,6 @@
 		3A0B381F2C42E04400C11D4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A0B38222C42E04400C11D4E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3A0B382E2C42E4D100C11D4E /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
-		3A0B38302C42E99B00C11D4E /* DevLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DevLogo.png; sourceTree = "<group>"; };
 		3A0B38332C42FB8000C11D4E /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		3A0B38352C42FC5200C11D4E /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
 		3A0B38372C42FC5E00C11D4E /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
@@ -50,9 +47,8 @@
 		3A0B383C2C43257C00C11D4E /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		3A0B38402C445D0700C11D4E /* SignInSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInSecondView.swift; sourceTree = "<group>"; };
 		3A0B38422C45464700C11D4E /* DummyNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyNavigationButton.swift; sourceTree = "<group>"; };
-		3A0B38452C46E29B00C11D4E /* QuickConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickConnect.swift; sourceTree = "<group>"; };
-		3AEB70AC2C50083D006A051E /* QuickConnectAuthenticated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickConnectAuthenticated.swift; sourceTree = "<group>"; };
-		3AEB70AE2C5008BA006A051E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3A6D496F2CA6DDA00072B882 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		3A6D49712CA6E2420072B882 /* Pills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pills.swift; sourceTree = "<group>"; };
 		3AEB70B02C500EA8006A051E /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 		3AEB70B22C50111E006A051E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3AEB70B42C502B54006A051E /* MiniCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCard.swift; sourceTree = "<group>"; };
@@ -69,6 +65,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				JellyfinMusicService.swift,
+				SecureStorage.swift,
 			);
 			target = 3A0B38172C42E04300C11D4E /* Foxy */;
 		};
@@ -145,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				3A0B383C2C43257C00C11D4E /* SignInViewModel.swift */,
+				3A6D496F2CA6DDA00072B882 /* MainViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -154,7 +152,6 @@
 			children = (
 				3A0B381B2C42E04300C11D4E /* Foxy.swift */,
 				3A0B381F2C42E04400C11D4E /* Assets.xcassets */,
-				3A0B38302C42E99B00C11D4E /* DevLogo.png */,
 				3A0B38332C42FB8000C11D4E /* ColorExtension.swift */,
 				3AEB70B02C500EA8006A051E /* KeychainHelper.swift */,
 			);
@@ -182,6 +179,7 @@
 				3AEB70B82C503399006A051E /* Album.swift */,
 				3AEB70BA2C514214006A051E /* AlbumList.swift */,
 				3AEB70BC2C515102006A051E /* ImageHelp.swift */,
+				3A6D49712CA6E2420072B882 /* Pills.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -189,9 +187,6 @@
 		3A0B38442C46E25B00C11D4E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3A0B38452C46E29B00C11D4E /* QuickConnect.swift */,
-				3AEB70AC2C50083D006A051E /* QuickConnectAuthenticated.swift */,
-				3AEB70AE2C5008BA006A051E /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -262,7 +257,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A0B38312C42E99B00C11D4E /* DevLogo.png in Resources */,
 				3A0B38232C42E04400C11D4E /* Preview Assets.xcassets in Resources */,
 				3A0B38202C42E04400C11D4E /* Assets.xcassets in Resources */,
 			);
@@ -276,21 +270,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AEB70B52C502B54006A051E /* MiniCard.swift in Sources */,
-				3AEB70AF2C5008BA006A051E /* User.swift in Sources */,
 				3A0B38382C42FC5E00C11D4E /* PrimaryButton.swift in Sources */,
-				3A0B38462C46E29B00C11D4E /* QuickConnect.swift in Sources */,
 				3AEB70B32C50111E006A051E /* HomeView.swift in Sources */,
 				3AEB70B92C503399006A051E /* Album.swift in Sources */,
 				3A0B381E2C42E04300C11D4E /* MainView.swift in Sources */,
 				3A0B38412C445D0700C11D4E /* SignInSecondView.swift in Sources */,
-				3AEB70AD2C50083D006A051E /* QuickConnectAuthenticated.swift in Sources */,
 				3A0B382F2C42E4D100C11D4E /* WelcomeView.swift in Sources */,
 				3AEB70BF2C5153A5006A051E /* SearchView.swift in Sources */,
 				3A0B38362C42FC5200C11D4E /* NavigationButton.swift in Sources */,
+				3A6D49722CA6E2420072B882 /* Pills.swift in Sources */,
 				3A0B383D2C43257C00C11D4E /* SignInViewModel.swift in Sources */,
 				3A0B38432C45464700C11D4E /* DummyNavigationButton.swift in Sources */,
 				3A0B383A2C430B5300C11D4E /* SignInFirstView.swift in Sources */,
 				3AEB70BD2C515102006A051E /* ImageHelp.swift in Sources */,
+				3A6D49702CA6DDA00072B882 /* MainViewModel.swift in Sources */,
 				3AEB70B12C500EA8006A051E /* KeychainHelper.swift in Sources */,
 				3AEB70BB2C514214006A051E /* AlbumList.swift in Sources */,
 				3AEB70B72C503392006A051E /* AlbumScroll.swift in Sources */,

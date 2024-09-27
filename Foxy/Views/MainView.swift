@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct MainView: View {
+    @StateObject private var viewModel = MainViewModel()
+
     var body: some View {
-        WelcomeView()
-        
-        if (false) {
+        if !viewModel.isSignedIn {
+            WelcomeView()
+        } else {
             TabView {
                 HomeView()
                     .tabItem {

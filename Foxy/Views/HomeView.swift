@@ -8,24 +8,18 @@
 import SwiftUI
 
 struct HomeView: View {
+    @StateObject private var viewModel = MainViewModel()
+    
     var body: some View {
         ScrollView {
             VStack {
-                VStack {
-                    HStack(alignment: .center) {
-                        MiniCard(title: "1989 (Taylor's Version)", text: "Taylor Swift", imageURL: "DevLogo")
-                        MiniCard(title: "Lover", text: "Taylor Swift", imageURL: "DevLogo")
-                    }
-                    HStack {
-                        MiniCard(title: "1989 (Taylor's Version)", text: "Taylor Swift", imageURL: "DevLogo")
-                        MiniCard(title: "Lover", text: "Taylor Swift", imageURL: "DevLogo")
-                    }
-                    HStack {
-                        MiniCard(title: "1989 (Taylor's Version)", text: "Taylor Swift", imageURL: "DevLogo")
-                        MiniCard(title: "Lover", text: "Taylor Swift", imageURL: "DevLogo")
-                    }
+                if viewModel.retrieveMusicLibrary() {
+                    Spacer()
                 }
                 
+                Pills()
+                    .padding(.top, 20)
+                    
                 AlbumScroll(title: "Recently Added")
                     .padding(.top, 20)
                 AlbumList(title: "Favourites")

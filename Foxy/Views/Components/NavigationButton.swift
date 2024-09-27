@@ -12,6 +12,8 @@ struct NavigationButton: View {
     let icon : String?
     let action : () -> Void
     
+    @Binding var isLoading: Bool
+    
     var body: some View {
         Button {
             action()
@@ -20,7 +22,10 @@ struct NavigationButton: View {
                 RoundedRectangle(cornerRadius: 15)
                     .foregroundColor(Color.primaryColor)
                 
-                if icon == nil {
+                if isLoading {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                } else if icon == nil {
                     Text(title)
                         .foregroundColor(.white)
                         .font(.title)

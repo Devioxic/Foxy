@@ -9,6 +9,7 @@ import SwiftUI
 
 struct WelcomeView: View {
     @StateObject private var viewModel = SignInViewModel()
+    @State private var buttonLoading: Bool = false
     
     var body: some View {
         NavigationStack(path: $viewModel.viewList) {
@@ -28,9 +29,9 @@ struct WelcomeView: View {
                         .padding(.horizontal, 20)
                     
                     Spacer()
-                    NavigationButton(title: "Get Started", icon: nil) {
+                    NavigationButton(title: "Get Started", icon: nil, action: {
                         viewModel.moveToFirstSignIn()
-                    }
+                    }, isLoading: $buttonLoading)
                     .frame(height: 65)
                     .padding(.horizontal, 20)
                     .padding(.bottom, 20)

@@ -7,132 +7,91 @@
 
 import Foundation
 import SwiftUI
-import Alamofire
+import JellyfinAPI
 
 class SignInViewModel : ObservableObject {
     @Published var viewList = NavigationPath()
     @Published var serverURL : String = ""
-    @Published var connectedToServer : Bool = false
     @Published var errorMessage : String = ""
     @Published var quickConnectCode : String = ""
     @Published var username : String = ""
     @Published var password : String = ""
-    @Published var isQuickConnectEnabled : Bool = false
+    @Published var quickConnectFailed : Bool = false
     @Published var showAlert : Bool = false
+            
+    init() {
+        observequickConnect()
+    }
     
-    private var authHeaders : HTTPHeaders = [
-        "Authorization": "MediaBrowser Client=Foxy, Device=iOS, DeviceId=123456, Version=0.1.0",
-        "Content-Type": "application/json"
-    ]
-    private var secret : String = ""
+    private func observequickConnect() {
+            JellyfinMusicService.shared.$quickConnectCode
+                .assign(to: &$quickConnectCode)
+
+            JellyfinMusicService.shared.$quickConnectFailed
+                .assign(to: &$quickConnectFailed)
+    }
     
-    init() {}
+    @MainActor
+    private func isValidUrl(_ urlString: String) async -> Bool {
+        guard let url = URL(string: urlString),
+              let scheme = url.scheme, ["http", "https"].contains(scheme),
+              url.host != nil else {
+            errorMessage = "Invalid URL"
+            return false
+        }
+        
+        // Send a request to the server to make sure it exists
+        let request = URLRequest(url: url)
+        
+        do {
+            let (_, response) = try await URLSession.shared.data(for: request)
+
+            // Check if the response is an HTTP response and validate the status code
+            if let httpResponse = response as? HTTPURLResponse {
+                if (200..<300).contains(httpResponse.statusCode) {
+                    return true
+                } else {
+                    errorMessage = "Invalid response status: \(httpResponse.statusCode). Wrong URL?"
+                    return false
+                }
+            } else {
+                errorMessage = "No valid HTTP response received. Wrong URL?co"
+                return false
+            }
+        } catch {
+            errorMessage = "Couldn't connect to the server. Wrong URL?"
+            return false
+        }
+    }
     
     func moveToFirstSignIn() {
         viewList.append(String(describing: SignInFirstView.self))
     }
     
-    func successfulLogin() {
-        print("Logging in")
-    }
-    
-    func quickConnectSuccessful() {
-        let parameters : [String : String] = [
-            "Secret" : self.secret
-        ]
+    @MainActor
+    func connectToServer() async {
+        let isValid = await isValidUrl(serverURL)
         
-        AF.request("\(self.serverURL)/Users/AuthenticateWithQuickConnect", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: authHeaders)
-            .validate()
-            .responseDecodable(of: QuickConnectAuthenticated.self) { response in
-                switch response.result {
-                case .success(let quickConnectResponse):
-                    KeychainHelper.shared.save(quickConnectResponse.AccessToken, for: "accessToken")
-                    self.connectedToServer = true
-                    self.successfulLogin()
-                case .failure(let error):
-                    print(error)
-                }
-            }
-    }
-    
-    func checkQuickConnectStatus() {
-        let timer = Timer(timeInterval: 3.0, repeats: true) { [weak self] timer in
-            guard let self = self else {
-                timer.invalidate()
-                return
-            }
-            
-            guard !self.connectedToServer else {
-                timer.invalidate()
-                return
-            }
-            
-            AF.request("\(self.serverURL)/QuickConnect/Connect?secret=\(self.secret)", method: .get, headers: self.authHeaders)
-                .validate()
-                .responseDecodable(of: QuickConnect.self) { response in
-                    switch response.result {
-                    case .success(let quickConnect):
-                        print(quickConnect)
-                        if quickConnect.Authenticated {
-                            self.quickConnectSuccessful()
-                        }
-                    case .failure(let error):
-                        print(error)
-                    }
-                }
+        guard isValid else {
+            showAlert = true
+            return
         }
+            
+        JellyfinMusicService.initialize(url: serverURL, token: nil)
         
-        RunLoop.main.add(timer, forMode: .common)
+        JellyfinMusicService.shared.setupQuickConnect()
+        JellyfinMusicService.shared.startQuickConnect()
+        
+        viewList.append(String(describing: SignInSecondView.self))
     }
     
-    func isQuickConnectionEnabled(completion: @escaping (Result<Bool, Error>) -> Void) {
-        AF.request("\(serverURL)/QuickConnect/Enabled", method: .get, headers: authHeaders)
-            .validate()
-            .responseJSON { response in
-                switch response.result {
-                case .success(let value):
-                    if let boolValue = value as? Bool {
-                        completion(.success(boolValue))
-                    } else {
-                        completion(.success(false))
-                    }
-                case .failure(let error):
-                    completion(.failure(error))
-                }
-            }
-    }
-    
-    func initiateQuickConnect() {
-        AF.request("\(serverURL)/QuickConnect/Initiate", method: .post, encoding: JSONEncoding.default, headers: authHeaders)
-            .validate()
-            .responseDecodable(of: QuickConnect.self) { response in
-                switch response.result {
-                case .success(let quickConnect):
-                    print(quickConnect)
-                    self.quickConnectCode = quickConnect.Code
-                    self.secret = quickConnect.Secret
-                    self.connectedToServer = quickConnect.Authenticated
-                    self.checkQuickConnectStatus()
-                case .failure(let error):
-                    print(error)
-                }
-            }
-    }
-    
-    func connectToServer() {
-        self.isQuickConnectEnabled = false
-        self.quickConnectCode = ""
-        isQuickConnectionEnabled { result in
-            switch result {
-            case .success(let isEnabled):
-                self.isQuickConnectEnabled = isEnabled
-                self.initiateQuickConnect()
-                self.viewList.append(String(describing: SignInSecondView.self))
-            case .failure(let error):
-                print(error)
-                self.errorMessage = "Can't connect to server"
-                self.showAlert = true
-            }
+    func signInUsingCredentials() async {
+        let (success, message) = await JellyfinMusicService.shared.signInUsingCreditentials(username: username, password: password)
+        
+        guard success else {
+            errorMessage = message!
+            showAlert = true
+            return
         }
     }
 }

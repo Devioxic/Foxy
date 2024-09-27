@@ -20,7 +20,7 @@ struct Album: View {
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                 } placeholder: {
-                    Image("DevLogo")
+                    Image("Foxies")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                 }
@@ -32,7 +32,7 @@ struct Album: View {
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                 } placeholder: {
-                    Image("DevLogo")
+                    Image("Foxies")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                 }

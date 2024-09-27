@@ -18,7 +18,7 @@ struct ImageHelp: View {
                     .resizable()
                     .aspectRatio(contentMode: type)
             } placeholder: {
-                Image("DevLogo")
+                Image("Foxies")
             }
         } else {
             Image(url)
@@ -29,5 +29,5 @@ struct ImageHelp: View {
 }
 
 #Preview {
-    ImageHelp(url : "DevLogo", type: .fit)
+    ImageHelp(url : "Foxies", type: .fit)
 }

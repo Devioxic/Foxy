@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SignInFirstView: View {
     @EnvironmentObject var viewModel : SignInViewModel
+    @State var buttonLoading: Bool = false
     
     var body: some View {
         GeometryReader { geometry in
@@ -39,9 +40,13 @@ struct SignInFirstView: View {
                 
                 Spacer()
                 
-                NavigationButton(title: "Continue", icon: nil) {
-                    viewModel.connectToServer()
-                }
+                NavigationButton(title: "Continue", icon: nil, action: {
+                    buttonLoading = true
+                    Task {
+                        await viewModel.connectToServer()
+                        buttonLoading = false
+                    }
+                }, isLoading: $buttonLoading)
                 .padding(20)
             }
             .alert(isPresented: $viewModel.showAlert) {
