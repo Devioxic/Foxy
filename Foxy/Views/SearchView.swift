@@ -16,9 +16,9 @@ struct SearchView: View {
                 ScrollView {
                     
                 }
+                .searchable(text: $searchText)
             }
         }
-        .searchable(text: $searchText)
     }
 }
 

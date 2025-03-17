@@ -17,8 +17,8 @@ struct PrimaryButton: View {
             action()
         } label: {
             ZStack {
-                RoundedRectangle(cornerRadius: 15)
-                    .foregroundColor(.primaryColor)
+                RoundedRectangle(cornerRadius: 10)
+                    .foregroundColor(.foxySecondary)
                 
                 if icon == nil {
                     Text(title)
@@ -28,8 +28,8 @@ struct PrimaryButton: View {
                 } else {
                     Label(title, systemImage: icon ?? "")
                         .foregroundColor(.white)
-                        .font(.title2)
-                        .bold()
+                        .font(.system(size: 18, weight: .bold))
+                        
                 }
             }
             .padding(.top)

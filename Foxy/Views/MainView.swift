@@ -9,9 +9,11 @@ import SwiftUI
 
 struct MainView: View {
     @StateObject private var viewModel = MainViewModel()
-
+    
     var body: some View {
-        if !viewModel.isSignedIn {
+        if !viewModel.ready {
+            LoadingScreen()
+        } else if !viewModel.isSignedIn {
             WelcomeView()
         } else {
             TabView {
@@ -20,13 +22,33 @@ struct MainView: View {
                         Image(systemName: "house.fill")
                         Text("Home")
                     }
-                    .toolbarBackground(Color.tabBarColor, for: .tabBar)
+                
+                SearchView()
+                    .tabItem {
+                        Image(systemName: "magnifyingglass")
+                        Text("Search")
+                    }
+                
+                LibraryView()
+                    .tabItem {
+                        Image(systemName: "music.note")
+                        Text("Library")
+                    }
+                
+                DownloadsView()
+                    .tabItem {
+                        Image(systemName: "arrow.down.circle")
+                        Text("Downloads")
+                    }
+                
+                SettingsView()
+                    .tabItem {
+                        Image(systemName: "gear")
+                        Text("Settings")
+                    }
+                    .toolbarBackground(.ultraThickMaterial, for: .tabBar)
                     .toolbarBackground(.visible, for: ToolbarPlacement.tabBar)
             }
         }
     }
-}
-
-#Preview {
-    MainView()
 }

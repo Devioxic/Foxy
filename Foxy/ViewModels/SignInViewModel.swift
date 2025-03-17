@@ -16,7 +16,7 @@ class SignInViewModel : ObservableObject {
     @Published var quickConnectCode : String = ""
     @Published var username : String = ""
     @Published var password : String = ""
-    @Published var quickConnectFailed : Bool = false
+    @Published var quickConnectFailed : Bool = true // Will be set to false if quick connect is enabled, causing it to be visible again
     @Published var showAlert : Bool = false
             
     init() {

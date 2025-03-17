@@ -1,15 +1,6 @@
 {
-  "originHash" : "9b867dbc4a593f3c03e82c916b989a3c4355a4c1129d987dca3ef0f812fd8a53",
+  "originHash" : "2567fe93a25d91c0bd1c387253c9216bf26a1a488a7970e16bbe0e14012391d9",
   "pins" : [
-    {
-      "identity" : "alamofire",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Alamofire/Alamofire",
-      "state" : {
-        "revision" : "f455c2975872ccd2d9c81594c658af65716e9b9a",
-        "version" : "5.9.1"
-      }
-    },
     {
       "identity" : "get",
       "kind" : "remoteSourceControl",
@@ -26,6 +17,24 @@
       "state" : {
         "revision" : "a0e848a7aaec55991610818de6128b15cfcec725",
         "version" : "0.4.0"
+      }
+    },
+    {
+      "identity" : "sqlite.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/stephencelis/SQLite.swift",
+      "state" : {
+        "revision" : "a95fc6df17d108bd99210db5e8a9bac90fe984b8",
+        "version" : "0.15.3"
+      }
+    },
+    {
+      "identity" : "unifiedblurhash",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/iankoex/UnifiedBlurHash",
+      "state" : {
+        "revision" : "39d18f3526c62e950c97090aac75d5dac1de9b21",
+        "version" : "1.0.3"
       }
     },
     {

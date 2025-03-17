@@ -11,29 +11,35 @@ struct MiniCard: View {
     let title : String
     let text : String
     let imageURL : String
+    let blurHash : String?
     
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 10)
                 .foregroundColor(Color.miniCardColor)
             HStack {
-                Image(imageURL)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .padding(5)
+                ImageHelp(imageID: imageURL, blurHash: blurHash)
+                    .frame(width: 45, height: 45)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .padding(.vertical, 5)
+                    .padding(.leading, 5)
                 
                 Spacer()
                 
                 VStack {
-                    Text(title)
-                        .font(.title3)
-                        .fontWeight(.medium)
-                        .padding(.horizontal, 5)
-                    Text(text)
-                        .foregroundColor(Color.secondaryText)
-                        .font(.callout)
-                        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-                        .padding(.horizontal, 5)
+                    HStack {
+                        Text(title)
+                            .fontWeight(.regular)
+                            .padding(.horizontal, 5)
+                        Spacer()
+                    }
+                    HStack {
+                        Text(text)
+                            .foregroundColor(Color.secondaryText)
+                            .font(.callout)
+                            .padding(.horizontal, 5)
+                        Spacer()
+                    }
                 }
                 
                 Spacer()
@@ -43,8 +49,4 @@ struct MiniCard: View {
         .frame(width: (UIScreen.main.bounds.width / 2) - 15, height: 60)
         
     }
-}
-
-#Preview {
-    MiniCard(title: "Lover", text: "Taylor Swift", imageURL: "DevLogo")
 }

@@ -8,27 +8,30 @@
 import SwiftUI
 
 struct AlbumScroll: View {
-    let title : String
+    @EnvironmentObject var viewModel: HomeViewModel
+    let title: String
+    let albums: [Album]
     
     var body: some View {
         VStack(alignment: .leading) {
             Text(title)
-                .font(.largeTitle)
+                .font(.title)
                 .fontWeight(.semibold)
                 .padding(.horizontal, 10)
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 10) {
                     Spacer()
                         .frame(width: 1)
-                    ForEach(0..<50) { index in
-                        Album(title: "Reputation", artist: "Taylor Swift", imageURL: "https://upload.wikimedia.org/wikipedia/en/f/f2/Taylor_Swift_-_Reputation.png", isLarge: false)
+                    ForEach(albums, id: \.id) { album in
+                        Button(action: {
+                            viewModel.addToPath(item: album)
+                        }, label: {
+                            AlbumView(album: album, showYearInsteadOfArtist: false, isLarge: false)
+                        })
+                        .buttonStyle(.plain)
                     }
                 }
             }
         }
     }
-}
-
-#Preview {
-    AlbumScroll(title: "Test")
 }

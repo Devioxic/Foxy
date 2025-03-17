@@ -37,6 +37,7 @@ class SecureStorage {
     }
     
     // Function to retrieve data from the Keychain
+    @discardableResult
     func retrieve(key: String) -> String? {
         let query = [
             kSecClass: kSecClassGenericPassword,
@@ -56,6 +57,7 @@ class SecureStorage {
     }
     
     // Function to update data in the Keychain
+    @discardableResult
     private func update(key: String, value: String) -> Bool {
         let query = [
             kSecClass: kSecClassGenericPassword,
@@ -71,6 +73,7 @@ class SecureStorage {
     }
     
     // Function to delete data from the Keychain
+    @discardableResult
     func delete(key: String) -> Bool {
         let query = [
             kSecClass: kSecClassGenericPassword,

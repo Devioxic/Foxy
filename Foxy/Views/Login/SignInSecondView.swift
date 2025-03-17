@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SignInSecondView: View {
-    @EnvironmentObject var viewModel : SignInViewModel
+    @EnvironmentObject var viewModel: SignInViewModel
     @State var buttonLoading: Bool = false
     
     var body: some View {
@@ -59,6 +59,7 @@ struct SignInSecondView: View {
                             .cornerRadius(12)
                             .padding(.horizontal, 20)
                     }
+                    .padding(.top, 20)
                     
                     VStack(alignment: .leading) {
                         Text("Password")

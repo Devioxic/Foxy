@@ -6,28 +6,21 @@
 //
 
 import Foundation
+import SwiftUI
 
 class MainViewModel: ObservableObject {
     @Published var isSignedIn: Bool = false
+    @Published var ready: Bool = false
     
+    @MainActor
     init() {
-        if JellyfinMusicService.trySignIn() {
-            print("Signed in")
-            isSignedIn = true
-        } else {
-            print("Not signed in")
-            isSignedIn = false
-        }
-        
-        JellyfinMusicService.shared.$isSignedIn
-            .assign(to: &$isSignedIn)
-    }
-    
-    func retrieveMusicLibrary() -> Bool {
         Task {
-            await JellyfinMusicService.shared.getRecentlyListened(amount: 10)
-        }
+            isSignedIn = await JellyfinMusicService.trySignIn()
         
-        return true
+            JellyfinMusicService.shared.$isSignedIn
+                .assign(to: &$isSignedIn)
+            
+            ready = true
+        }
     }
 }
